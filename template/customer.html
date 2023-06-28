@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1> CAR RENTAL MANAGEMENT </h1>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+@charset "UTF-8";
+
+article, aside, footer, header, main, nav, section {
+  display: block;
+}
+
+html, body, h1, h2, h3, ul, li, a, p, 
+article, aside, footer, header, main, nav, section {
+  padding: 0;
+  margin: 0;
+}
+
+.banner {
+  background-color: RGB(0,63,125);
+  color: white;
+  padding: 10px 20px;
+}
+
+body {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: RGB(213,213,255);
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 15px;
+}
+
+nav {
+  background-color: #20416c;
+  padding: 0px;
+  margin-top: 1px;
+}
+
+li a {
+  color: white;
+}
+
+li {
+  display: inline;
+  margin-left: 15px;
+  margin-right: 15px;
+  font-size: 20px;
+  font-variant: small-caps;
+  font-weight: bold;
+}
+
+section {
+  background-color: #bbbbbb;
+  margin-top: 10px;
+  padding: 5px;
+}
+
+article {
+  background-color: white;
+  margin-top: 5px;
+  padding: 10px 15px;
+}
+
+main {
+
+  width: 600px;
+  float: left;
+  margin-bottom: 10px;
+}
+
+aside {
+  background-color: #bbbbbb;
+  width: 350px;
+  float: right;
+  padding: 0px;
+  margin-top: 10px;
+}
+
+footer {
+  clear: both;
+  background-color: #20416c;
+  color: white;
+  padding: 5px 20px;
+}
+button {
+  background-color: #27b7db;
+  color: rgb(252, 252, 252);
+  padding: 9px 10px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  align-content: center;
+  width: 50%;
+}
+    
+</style>
+</head>
+<body>
+<header class="banner">
+        <h2>Customer Login Portal </h2>        
+    </header>
+    
+    <main>
+    <section>
+    <article>
+<h1> BOOKING </h1>
+<h1> WELCOME</h1>
+<p> User successfullyed logged in</p>
+<button onclick="document.getElementById('id01').style.display='block'"><a href="http://localhost:8000/booking">BOOK CAB</a></button>
+<button onclick="document.getElementById('id02').style.display='block'"><a href="http://localhost:8000/driver">BOOK DRIVER</a></button>
+</article>
+</main>
+
+<aside>{% load static %}
+  <a href="http://localhost:8000/login/"><h5>Logout</h5></a>
+
+<img src="{% static '1.jpg'%}" style="width:100%" align="right">
+
+</aside>
+
+</body>
+</html>

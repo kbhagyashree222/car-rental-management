@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1> CAR RENTAL MANAGEMENT </h1>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+@charset "UTF-8";
+
+article, aside, footer, header, main, nav, section {
+  display: block;
+}
+
+html, body, h1, h2, h3, ul, li, a, p, 
+article, aside, footer, header, main, nav, section {
+  padding: 0;
+  margin: 0;
+}
+
+.banner {
+  background-color: RGB(0,63,125);
+  color: white;
+  padding: 10px 20px;
+}
+
+body {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: RGB(213,213,255);
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 15px;
+}
+
+nav {
+  background-color: #20416c;
+  padding: 0px;
+  margin-top: 1px;
+}
+
+li a {
+  color: white;
+}
+
+li {
+  display: inline;
+  margin-left: 15px;
+  margin-right: 15px;
+  font-size: 20px;
+  font-variant: small-caps;
+  font-weight: bold;
+}
+
+section {
+  background-color: #bbbbbb;
+  margin-top: 10px;
+  padding: 5px;
+}
+
+article {
+  background-color: white;
+  margin-top: 5px;
+  padding: 10px 15px;
+}
+
+main {
+
+  width: 600px;
+  float: left;
+  margin-bottom: 10px;
+}
+
+aside {
+  background-color: #bbbbbb;
+  width: 350px;
+  float: right;
+  padding: 0px;
+  margin-top: 10px;
+}
+
+footer {
+  clear: both;
+  background-color: #20416c;
+  color: white;
+  padding: 5px 20px;
+}
+  /* Full-width input fields */
+input[type=text], input[type=date] {
+  width: 100%;
+  padding: 10px 15px;
+  margin: 3px 0;
+  display: inline-block;
+  border: 4px solid rgb(14, 48, 112);
+  box-sizing: border-box;
+  background-color: #f3f8fa;
+  align-content: center;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #27b7db;
+  color: rgb(252, 252, 252);
+  padding: 9px 10px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  align-content: center;
+  width: 50%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #7e3833;
+  color: rgb(252, 252, 252);
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 10px 0 10px 0;
+  position: relative;
+  background-color: #e7cbcb;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 6px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal{
+  width: 100%; /* Full width */
+  height: 100%; 
+  background-color: #a5a4f8a1;
+}
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5px auto; /* 15% from the top and centered */
+  border: 1px solid #888;
+  width: 80%;
+ } /* Could be more or less, depending on screen size */
+/* The Close Button (x) */
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 500px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+    
+</style>
+</head>
+<body>
+<header class="banner">
+        <h2>Customer Login Portal </h2>
+    </header>
+    <main>
+
+    <section>
+    <article>
+<h1> CAB BOOKING </h1>
+<h1> WELCOME</h1>
+<p> User successfullyed logged in</p>
+
+
+
+
+<!-- The Modal -->
+<div id="id01" class="modal">
+  <table border="0">
+    <tr>
+  <form  class="modal-content animate" action="" method="post">{% csrf_token %} 
+    <div class="container">
+    
+     <td>
+    <label for="type"><b>Distance</b></label><br>
+    </td></tr><tr><td>    <select name="type" id="type"><option value="in city" >IN CITY </option> 
+    <option value="outside city" >OUTSIDE THE CITY </option>
+    </select>
+    </td> </tr><br>
+    <tr>
+    <td>
+    <label for="from the"><b>From the location</b></label></td>
+  </tr><tr>  <td><input type="text" placeholder="Enter the location from where you want to go" name="from the" id="from the" required><br> 
+    </td>
+    </tr>
+    <tr> <td>
+    <label for="destination"><b>Destination</b></label>
+    </td></tr><tr><td>    <input type="text" placeholder="Enter the destination" name="destination" id="destination" required><br>
+    </td> </tr>
+    <tr> <td><label for="edate"><b>Date</b></label>
+    </td></tr><tr><td>   <input type="date" placeholder="date" name="edate" id="edate" required><br> </br>
+    </td></tr>
+    <tr><td>
+    <label for="email"><b>Email</b></label>
+    </td></tr><tr><td>   <input type="text" placeholder="Enter Email" name="email" id="email" required><br>
+    </td></tr>
+    <tr><td>
+    <label for="Mobile"><b>Mobile Number</b></label><br>
+    </td></tr><tr><td>  <input type="mobile" placeholder="Enter Mobile" name="mobile" id="mobile" required><br>
+    </td></tr>
+    
+    <tr>
+    <td>
+    <button type="submit" class="bookingbtn">BOOK</button></td></tr>
+    </div>
+    <tr><td>
+  
+  
+    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+    
+  </div>
+  
+  </form>
+  </table>
+ 
+</article>
+</main>
+
+<aside>{% load static %}
+    <a href="http://localhost:8000/login/"><h5>Logout</h5></a>
+    <img src="{% static '1.jpg'%}" style="width:100%" align="right">  
+
+</aside>
+
+</body>
+</html>
